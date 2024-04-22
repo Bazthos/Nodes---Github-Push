@@ -8,7 +8,7 @@ pipeline {
     }
 
     stages {
-        stage('Prepare Environment') {
+        stage('Prepare Classses') {
             steps {
                 script {
                     // Vérifier si le dossier existe et le nettoyer
