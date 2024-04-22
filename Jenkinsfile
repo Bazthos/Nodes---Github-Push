@@ -31,6 +31,18 @@ pipeline {
             }
         }
 
+        stage('Clone Repository') {
+            steps {
+                script {
+                    // Cloner le dépôt Git
+                    if (isUnix()) {
+                        sh "git clone ${GIT_URL}"
+                    } else {
+                        powershell "git clone ${GIT_URL}"
+                    }
+                }
+            }
+        }
         
         stage('Install Dependencies') {
             steps {
@@ -68,3 +80,4 @@ pipeline {
         }
     }
 }
+
