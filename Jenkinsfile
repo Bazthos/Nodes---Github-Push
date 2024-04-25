@@ -55,12 +55,23 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
+        stage('Test GET') {
             steps {
                 script {
                     dir("${PROJECT_DIR}") {
-                        // Exécuter npm test dans le répertoire du projet cloné
-                        powershell 'npm test'
+                        
+                        powershell 'npm run test:get'
+                    }
+                }
+            }
+        }
+        
+        stage('Test POST') {
+            steps {
+                script {
+                    dir("${PROJECT_DIR}") {
+                        
+                        powershell 'npm run test:post'
                     }
                 }
             }
