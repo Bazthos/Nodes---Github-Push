@@ -10,8 +10,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --detectOpenHandles --runInBand",
-    "test:post": "jest tests/post.test.js",
-    "test:get": "jest tests/get.test.js"
+    "test:post": "jest tests/post.test.js --outputFile=test_results/post.xml --json --outputLocation=test_results/post",
+    "test:get": "jest tests/get.test.js --outputFile=test_results/get.xml --json --outputLocation=test_results/get"
   },
   "keywords": [],
   "author": "",
