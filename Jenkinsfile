@@ -55,27 +55,17 @@ pipeline {
             }
         }
 
-        stage('Test GET') {
+        stage('Tests') {
             steps {
                 script {
                     dir("${PROJECT_DIR}") {
                         
-                        powershell 'npm run test:get'
+                        powershell 'npm test'
                     }
                 }
             }
         }
-        
-        stage('Test POST') {
-            steps {
-                script {
-                    dir("${PROJECT_DIR}") {
-                        
-                        powershell 'npm run test:post'
-                    }
-                }
-            }
-        }
+    
     }
     // autres configurations
     
