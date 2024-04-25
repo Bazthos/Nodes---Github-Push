@@ -9,7 +9,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --detectOpenHandles --runInBand"
+    "test": "jest --detectOpenHandles --runInBand",
+    "test:post": "jest tests/post.test.js",
+    "test:get": "jest tests/get.test.js"
   },
   "keywords": [],
   "author": "",
